@@ -6,7 +6,7 @@ load_dotenv()
  
  
 def create_app() -> Flask:
-    app = Flask(__name__)
+    app = Flask(__name__, template_folder="../front_end/templates")
     app.secret_key = os.getenv("SECRET_KEY", "troque-esta-chave-no-env")
  
     from .routes import main
